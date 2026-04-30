@@ -1,64 +1,93 @@
-ProtocolMemory v0.2
+# ProtocolMemory v0.2
 
 Minimal adaptive layer for decision systems
 
-What This Is
+---
 
-ProtocolMemory is NOT a learning system.
+## What This Is
+
+ProtocolMemory is **NOT** a learning system.
 
 It is:
 
-a constraint layer that prevents decision systems from drifting
+> **a constraint layer that prevents decision systems from drifting**
 
-What It Does
-detects distortion in decision patterns
-compares conditional vs baseline distribution
-suggests minimal threshold adjustments
-applies them slowly and safely
-What It Does NOT Do
-does not optimize aggressively
-does not retrain models
-does not maximize performance
-Core Philosophy
+---
+
+## What It Does
+
+ProtocolMemory:
+
+- detects distortion in decision patterns  
+- compares conditional vs baseline distributions  
+- suggests minimal threshold adjustments  
+- applies them slowly and safely  
+
+---
+
+## What It Does NOT Do
+
+ProtocolMemory:
+
+- does not optimize aggressively  
+- does not retrain models  
+- does not maximize performance  
+
+---
+
+## Core Philosophy
 
 Most systems fail because:
 
-they learn too fast
-they adjust too much
-they lose structure
+- they learn too fast  
+- they adjust too much  
+- they lose structure  
 
 ProtocolMemory does the opposite:
 
-learn slowly, change minimally, preserve structure
+> **learn slowly, change minimally, preserve structure**
 
-Key Mechanisms
-Delayed learning (20+ events)
-Single adjustment at a time
-Cooldown between changes
-Threshold clipping
-Distortion-based feedback
-Why This Matters
+---
+
+## Key Mechanisms
+
+- **Delayed learning** (no adjustment before 20+ events)  
+- **Single adjustment** (one change at a time)  
+- **Cooldown** (no repeated changes on the same parameter)  
+- **Threshold clipping** (safe bounds enforced)  
+- **Distortion-based feedback** (not performance-based)  
+
+---
+
+## Why This Matters
 
 In unstable environments:
 
-markets
-geopolitics
-social systems
+- markets  
+- geopolitics  
+- social systems  
 
-The problem is not lack of intelligence.
+the problem is not lack of intelligence.
 
 It is:
 
-loss of stability due to overreaction
+> **loss of stability due to overreaction**
 
-Design Goal
+---
 
-Keep the system usable under instability.
+## Design Goal
 
-Usage
+> **Keep the system usable under instability.**
+
+---
+
+## Usage
+
+```python
 memory = ProtocolMemory()
 
 memory.ingest(card)
+
 adjustments = memory.suggest_adjustments()
 memory.apply_adjustments(thresholds)
 Position in LoPAS
@@ -70,7 +99,7 @@ NOT the sensor (LPTM / CAG / CHD)
 
 It is:
 
-the memory that prevents collapse
+the memory layer that prevents structural collapse
 
 Final Line
 
