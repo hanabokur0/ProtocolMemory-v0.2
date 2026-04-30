@@ -105,3 +105,19 @@ Final Line
 
 Intelligence learns fast.
 Systems that survive learn slowly.
+
+Position in LoPAS
+
+ProtocolMemory is:
+
+NOT the brain (DDA)
+NOT the sensor (LPTM / CAG / CHD)
+
+It is:
+
+the memory layer that prevents structural collapse
+
+Final Line
+
+Intelligence learns fast.
+Systems that survive learn slowly.
